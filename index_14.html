@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  หน้าแชร์ลิงก์ ระบบติดตามผู้ป่วยค้างชำระ
+    ลิงก์ระบบ /exec ใส่ไว้แล้ว
+    เหลือแก้ 1 อย่าง: SITE_URL_HERE (2 จุด) → ลิงก์ของหน้านี้หลังอัปโหลด (ไม่มี / ท้าย) เช่น https://ชื่อบัญชี.github.io/debt-tracker
+-->
+<title>ระบบติดตามผู้ป่วยค้างชำระ · โรงพยาบาลเขาฉกรรจ์</title>
+<meta name="description" content="ทะเบียนลูกหนี้ค่ารักษาพยาบาล ติดตามทวงถาม ออกหนังสือทวงหนี้ และรายงานสำหรับผู้บริหาร — กลุ่มงานประกันสุขภาพ โรงพยาบาลเขาฉกรรจ์">
+
+<!-- ชื่อและภาพที่ขึ้นตอนแชร์ลิงก์ (LINE, Facebook, Messenger, Teams) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="โรงพยาบาลเขาฉกรรจ์">
+<meta property="og:title" content="ระบบติดตามผู้ป่วยค้างชำระ">
+<meta property="og:description" content="ทะเบียนลูกหนี้ · ติดตามทวงถาม · หนังสือทวงหนี้ · รายงาน — กลุ่มงานประกันสุขภาพ โรงพยาบาลเขาฉกรรจ์">
+<meta property="og:image" content="SITE_URL_HERE/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ระบบติดตามผู้ป่วยค้างชำระ โรงพยาบาลเขาฉกรรจ์">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ระบบติดตามผู้ป่วยค้างชำระ">
+<meta name="twitter:image" content="SITE_URL_HERE/og-image.png">
+<meta name="theme-color" content="#0C7C82">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap">
+<style>
+  :root { --teal: #0C7C82; --dark: #0F2F33; --mist: #F2F7F7; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { font-family: 'Sarabun', Tahoma, sans-serif; background: linear-gradient(135deg, #0F2F33, #0C5A5F 55%, #0C7C82); color: #F4F8F7; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .card { width: 100%; max-width: 420px; text-align: center; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: 24px; padding: 36px 28px; }
+  .ico { width: 76px; height: 76px; margin: 0 auto 18px; border-radius: 20px; background: linear-gradient(145deg, #35B4B0, #0C7C82); display: flex; align-items: center; justify-content: center; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  p { margin: 0; color: #CFE5E2; font-size: 15px; }
+  .spin { width: 34px; height: 34px; margin: 22px auto 14px; border-radius: 50%; border: 4px solid rgba(255,255,255,.25); border-top-color: #fff; animation: s .8s linear infinite; }
+  @keyframes s { to { transform: rotate(360deg); } }
+  a.btn { display: inline-block; margin-top: 18px; padding: 12px 22px; border-radius: 14px; background: #fff; color: var(--teal); font-weight: 700; text-decoration: none; }
+  @media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="ico"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/></svg></div>
+    <h1>ระบบติดตามผู้ป่วยค้างชำระ</h1>
+    <p>โรงพยาบาลเขาฉกรรจ์ · กลุ่มงานประกันสุขภาพ</p>
+    <div class="spin" role="status" aria-label="กำลังเปิดระบบ"></div>
+    <p>กำลังเปิดระบบ...</p>
+    <a class="btn" id="go" href="https://script.google.com/macros/s/AKfycbxrxmEIVg22beRAxrjhwc8Z72232xtyKXR_ipc4SKe4ZbI71fQh-Dwp9WEvNZZKJieT2A/exec">เข้าสู่ระบบ</a>
+  </main>
+  <script>
+    /* พาไปหน้าระบบด้วย JavaScript (ไม่ใช้ meta refresh เพื่อให้ LINE/Facebook ยังอ่านชื่อและภาพของหน้านี้ได้) */
+    (function () { var u = document.getElementById('go').getAttribute('href'); if (u && u.indexOf('http') === 0) setTimeout(function () { location.replace(u); }, 300); })();
+  </script>
+</body>
+</html>
